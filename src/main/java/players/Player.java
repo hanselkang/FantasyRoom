@@ -1,3 +1,9 @@
+package players;
+
+import items.Item;
+import treasures.Treasure;
+import weapons.Weapon;
+
 import java.util.ArrayList;
 
 public abstract class Player {
