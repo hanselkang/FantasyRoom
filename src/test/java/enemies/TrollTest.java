@@ -3,6 +3,7 @@ package enemies;
 import org.junit.Before;
 import org.junit.Test;
 import players.Barbarian;
+import rooms.ThroneRoom;
 import weapons.Club;
 import weapons.Weapon;
 
@@ -15,12 +16,14 @@ public class TrollTest {
 
     Barbarian barbarian;
 
+    ThroneRoom throneRoom;
+
 
     @Before
     public void before(){
         club = new Club("Club",20);
         troll = new Troll("John",50,club);
-        barbarian = new Barbarian("Stuart",10,20,30,club);
+        barbarian = new Barbarian("Stuart",10,20,30,club,throneRoom, false);
     }
 
     @Test

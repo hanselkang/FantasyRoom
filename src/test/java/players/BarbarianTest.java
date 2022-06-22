@@ -7,6 +7,7 @@ import items.HealingPotion;
 import items.ManaPotion;
 import org.junit.Before;
 import org.junit.Test;
+import rooms.Room;
 import rooms.ThroneRoom;
 import rooms.TortureRoom;
 import treasures.Gold;
@@ -45,6 +46,7 @@ public class BarbarianTest {
     ArrayList<Enemy> enemies2;
     ArrayList<Treasure> treasures1;
     ArrayList<Treasure> treasures2;
+    ArrayList<Room> totalRoom;
 
     @Before
     public void before(){
@@ -55,7 +57,7 @@ public class BarbarianTest {
         manaPotion = new ManaPotion("MP");
         gold = new Gold("Gold");
         jewel = new Jewel("Diamond");
-        barbarian1 = new Barbarian("Conan",50,100,200, sword);
+        barbarian1 = new Barbarian("Conan",50,100,200, sword, throneRoom, false);
         troll = new Troll("Fiona",40,sword);
 
 
@@ -70,7 +72,6 @@ public class BarbarianTest {
 
         enemies2 = new ArrayList<>();
         enemies2.add(troll1);
-        enemies2.add(orc);
 
         treasures1 = new ArrayList<>();
         treasures1.add(gold);
@@ -82,6 +83,10 @@ public class BarbarianTest {
 
         throneRoom = new ThroneRoom("001",false,enemies1,treasures1, LEVEL1);
         tortureRoom = new TortureRoom("002",false,enemies2,treasures2, LEVEL2);
+
+        totalRoom = new ArrayList<>();
+        totalRoom.add(throneRoom);
+        totalRoom.add(tortureRoom);
     }
 
     @Test
@@ -130,8 +135,8 @@ public class BarbarianTest {
 
     @Test
     public void canAttack(){
-        barbarian1.attackEnemy(troll);
-        assertEquals(20,troll.getHealth());
+        barbarian1.attackEnemy(throneRoom, troll1);
+        assertEquals(20,troll1.getHealth());
     }
 
     @Test
@@ -150,5 +155,26 @@ public class BarbarianTest {
         barbarian1.pickTreasureFromRoom(throneRoom);
         assertEquals(1,barbarian1.getTreasures().size());
         assertEquals(1,throneRoom.getTreasures().size());
+    }
+
+    @Test
+    public void canCompleteRoomByPickingTreasures(){
+
+        barbarian1.pickTreasureFromRoom(throneRoom);
+        barbarian1.pickTreasureFromRoom(throneRoom);
+
+        assertEquals(1,barbarian1.getCompletedRooms().size());
+        assertEquals(true,throneRoom.isComplete());
+    }
+
+    @Test
+    public void canCompleteRoomByKillingEnemies(){
+        barbarian1.attackEnemy(throneRoom, troll1);
+        barbarian1.attackEnemy(tortureRoom, troll1);
+        assertEquals(0,throneRoom.getEnemies().size());
+        assertEquals(true,throneRoom.isComplete());
+        assertEquals(true,barbarian1.isFinish() );
+
+
     }
 }

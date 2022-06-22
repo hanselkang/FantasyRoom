@@ -20,10 +20,16 @@ public abstract class Player {
 
     private ArrayList<Room> completedRooms;
 
+    private ArrayList<Room> totalRooms;
+
+    private Room currentRoom;
+
+    private boolean finish;
 
 
 
-    public Player(String name, int mana, int stamina, int health, Weapon activeWeapon) {
+
+    public Player(String name, int mana, int stamina, int health, Weapon activeWeapon, Room currentRoom, boolean finish) {
         this.name = name;
         this.mana = mana;
         this.stamina = stamina;
@@ -33,6 +39,9 @@ public abstract class Player {
         treasures = new ArrayList<Treasure>();
         items = new ArrayList<Item>();
         completedRooms = new ArrayList<>();
+        this.currentRoom = currentRoom;
+        this.totalRooms = new ArrayList<Room>();
+        this.finish = false;
 
 
     }
@@ -73,8 +82,16 @@ public abstract class Player {
         return completedRooms;
     }
 
+    public boolean isFinish() {
+        return finish;
+    }
+
     public void setHealth(int health) {
         this.health = health;
+    }
+
+    public void setCompletedRooms(ArrayList<Room> completedRooms) {
+        this.completedRooms = completedRooms;
     }
 
     public void addWeapons(Weapon weapons) {
@@ -92,16 +109,43 @@ public abstract class Player {
         this.items.add(items);
     }
 
-    public void attackEnemy(Enemy enemy){
+    public void attackEnemy(Room room, Enemy enemy){
+
         int enemyHealth = enemy.getHealth();
-        enemyHealth -= this.getActiveWeapon().getDamage();
-        enemy.setHealth(enemyHealth);
+        if (enemy.getHealth() > this.activeWeapon.getDamage()) {
+            enemyHealth -= this.getActiveWeapon().getDamage();
+            enemy.setHealth(enemyHealth);
+
+        } else if (enemy.getHealth() <= this.activeWeapon.getDamage()){
+            room.getEnemies().remove(enemy);
+            if (room.getEnemies().size() == 0) {
+                room.setComplete(true);
+                if (this.completedRooms.size() == totalRooms.size() ) {
+                    this.completeGame(true);
+                }
+            }
+        }
+
+    }
+
+    private void completeGame(boolean finish) {
+        this.finish = true;
     }
 
     public void pickTreasureFromRoom(Room room){
-        Treasure treasure = room.removeTreasure();
-        this.treasures.add(treasure);
+        if (room.getTreasures().size() > 1) {
+            Treasure treasure = room.removeTreasure();
+            this.treasures.add(treasure);
+        } else {
+            Treasure treasure = room.removeTreasure();
+            this.treasures.add(treasure);
+            this.completedRooms.add(room);
+            room.setComplete(true);
+        }
     }
+
+
+
 
 
 

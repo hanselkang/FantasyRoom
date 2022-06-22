@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c535848-eb40-4f77-99d3-00a5a9592fb5" name="Changes" comment="Attack each other tests done">
+    <list default="true" id="4c535848-eb40-4f77-99d3-00a5a9592fb5" name="Changes" comment="Picking treasure tests done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/players/Barbarian.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/players/Barbarian.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/players/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/players/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rooms/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rooms/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rooms/RoomLevel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rooms/RoomLevel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/enemies/TrollTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/enemies/TrollTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/players/BarbarianTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/players/BarbarianTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/rooms/ThroneRoomTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/rooms/ThroneRoomTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +59,30 @@
       <recent name="players" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BarbarianTest.canPickTreasures">
+  <component name="RunManager" selected="JUnit.All in fantastic_fantasy">
+    <configuration name="All in fantastic_fantasy" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="fantastic_fantasy" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BarbarianTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="fantastic_fantasy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="players.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="players" />
+      <option name="MAIN_CLASS_NAME" value="players.BarbarianTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BarbarianTest.canAttack" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="fantastic_fantasy" />
       <extension name="coverage">
@@ -74,7 +99,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BarbarianTest.canBeAttacked" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BarbarianTest.canCompleteRoomByKillingEnemies" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="fantastic_fantasy" />
       <extension name="coverage">
         <pattern>
@@ -84,13 +109,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="players" />
       <option name="MAIN_CLASS_NAME" value="players.BarbarianTest" />
-      <option name="METHOD_NAME" value="canBeAttacked" />
+      <option name="METHOD_NAME" value="canCompleteRoomByKillingEnemies" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BarbarianTest.canPickTreasures" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BarbarianTest.hasName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="fantastic_fantasy" />
       <extension name="coverage">
         <pattern>
@@ -100,39 +125,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="players" />
       <option name="MAIN_CLASS_NAME" value="players.BarbarianTest" />
-      <option name="METHOD_NAME" value="canPickTreasures" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BarbarianTest.hasCompletedRooms" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="fantastic_fantasy" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="players.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="players" />
-      <option name="MAIN_CLASS_NAME" value="players.BarbarianTest" />
-      <option name="METHOD_NAME" value="hasCompletedRooms" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TrollTest.canAttack" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="fantastic_fantasy" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="enemies.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="enemies" />
-      <option name="MAIN_CLASS_NAME" value="enemies.TrollTest" />
-      <option name="METHOD_NAME" value="canAttack" />
+      <option name="METHOD_NAME" value="hasName" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -140,10 +133,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BarbarianTest.canPickTreasures" />
-        <item itemvalue="JUnit.BarbarianTest.hasCompletedRooms" />
-        <item itemvalue="JUnit.BarbarianTest.canBeAttacked" />
-        <item itemvalue="JUnit.TrollTest.canAttack" />
+        <item itemvalue="JUnit.All in fantastic_fantasy" />
+        <item itemvalue="JUnit.BarbarianTest.canCompleteRoomByKillingEnemies" />
+        <item itemvalue="JUnit.BarbarianTest" />
+        <item itemvalue="JUnit.BarbarianTest.hasName" />
         <item itemvalue="JUnit.BarbarianTest.canAttack" />
       </list>
     </recent_temporary>
@@ -206,7 +199,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655904127444</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Picking treasure tests done">
+      <created>1655905852819</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1655905852819</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -228,6 +228,7 @@
     <MESSAGE value="player Room test with Array done" />
     <MESSAGE value="Enemy test with Array done" />
     <MESSAGE value="Attack each other tests done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Attack each other tests done" />
+    <MESSAGE value="Picking treasure tests done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Picking treasure tests done" />
   </component>
 </project>

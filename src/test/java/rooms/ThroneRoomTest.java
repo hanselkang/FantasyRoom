@@ -51,7 +51,7 @@ public class ThroneRoomTest {
         manaPotion = new ManaPotion("MP");
         gold = new Gold("Gold");
         jewel = new Jewel("Diamond");
-        barbarian1 = new Barbarian("Conan",50,100,200, sword);
+        barbarian1 = new Barbarian("Conan",50,100,200, sword,throneRoom, false);
         troll1 = new Troll("Andrew",20,club);
         troll2 = new Troll("Emma", 15,sword);
         troll3 = new Troll("Derek", 25,axe);
