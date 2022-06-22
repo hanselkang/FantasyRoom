@@ -4,15 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c535848-eb40-4f77-99d3-00a5a9592fb5" name="Changes" comment="weapon class">
-      <change afterPath="$PROJECT_DIR$/src/main/java/items/Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/treasures/Treasure.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/weapons/Sword.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/players/BarbarianTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Barbarian.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/players/Barbarian.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/players/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapons/Weapon.java" afterDir="false" />
+    <list default="true" id="4c535848-eb40-4f77-99d3-00a5a9592fb5" name="Changes" comment="player class test done">
+      <change afterPath="$PROJECT_DIR$/src/main/java/items/HealingPotion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/items/ManaPotion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/treasures/Gold.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/treasures/Jewel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/weapons/Axe.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/weapons/Club.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/items/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/items/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/players/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/players/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/treasures/Treasure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/treasures/Treasure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/players/BarbarianTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/players/BarbarianTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +60,7 @@
       <recent name="players" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BarbarianTest.hasActiveWeapon">
+  <component name="RunManager" selected="JUnit.BarbarianTest.canAddTreasureList">
     <configuration name="BarbarianTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="fantastic_fantasy" />
       <extension name="coverage">
@@ -69,6 +72,54 @@
       <option name="PACKAGE_NAME" value="players" />
       <option name="MAIN_CLASS_NAME" value="players.BarbarianTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BarbarianTest.canAddItemList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="fantastic_fantasy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="players.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="players" />
+      <option name="MAIN_CLASS_NAME" value="players.BarbarianTest" />
+      <option name="METHOD_NAME" value="canAddItemList" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BarbarianTest.canAddTreasureList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="fantastic_fantasy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="players.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="players" />
+      <option name="MAIN_CLASS_NAME" value="players.BarbarianTest" />
+      <option name="METHOD_NAME" value="canAddTreasureList" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BarbarianTest.canAddWeaponList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="fantastic_fantasy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="players.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="players" />
+      <option name="MAIN_CLASS_NAME" value="players.BarbarianTest" />
+      <option name="METHOD_NAME" value="canAddWeaponList" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -91,6 +142,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BarbarianTest.canAddTreasureList" />
+        <item itemvalue="JUnit.BarbarianTest.canAddItemList" />
+        <item itemvalue="JUnit.BarbarianTest.canAddWeaponList" />
         <item itemvalue="JUnit.BarbarianTest.hasActiveWeapon" />
         <item itemvalue="JUnit.BarbarianTest" />
       </list>
@@ -119,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655894916009</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="player class test done">
+      <created>1655895754211</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1655895754211</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -136,6 +197,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
     <MESSAGE value="weapon class" />
-    <option name="LAST_COMMIT_MESSAGE" value="weapon class" />
+    <MESSAGE value="player class test done" />
+    <option name="LAST_COMMIT_MESSAGE" value="player class test done" />
   </component>
 </project>

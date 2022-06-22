@@ -17,6 +17,8 @@ public abstract class Player {
     private ArrayList<Item> items;
 
 
+
+
     public Player(String name, int mana, int stamina, int health, Weapon activeWeapon) {
         this.name = name;
         this.mana = mana;
@@ -61,5 +63,15 @@ public abstract class Player {
         return items;
     }
 
+    public void addWeapons(Weapon weapons) {
+        this.weapons.add(weapons);
+    }
 
+    public void addTreasures(Treasure treasures) {
+        this.treasures.add(treasures);
+    }
+
+    public void addItems(Item items) {
+        this.items.add(items);
+    }
 }
