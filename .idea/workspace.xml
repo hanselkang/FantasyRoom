@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c535848-eb40-4f77-99d3-00a5a9592fb5" name="Changes" comment="player class test with Array done">
-      <change afterPath="$PROJECT_DIR$/src/main/java/enemies/Enemy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/enemies/Orc.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/enemies/Troll.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rooms/Room.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rooms/RoomLevel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rooms/ThroneRoom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rooms/TortureRoom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/rooms/ThroneRoomTest.java" afterDir="false" />
+    <list default="true" id="4c535848-eb40-4f77-99d3-00a5a9592fb5" name="Changes" comment="player Room test with Array done">
+      <change afterPath="$PROJECT_DIR$/src/test/java/enemies/TrollTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,43 +49,12 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="enemies" />
       <recent name="rooms" />
       <recent name="players" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ThroneRoomTest.hasLevel">
-    <configuration name="BarbarianTest.canAddItemList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="fantastic_fantasy" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="players.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="players" />
-      <option name="MAIN_CLASS_NAME" value="players.BarbarianTest" />
-      <option name="METHOD_NAME" value="canAddItemList" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BarbarianTest.canAddTreasureList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="fantastic_fantasy" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="players.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="players" />
-      <option name="MAIN_CLASS_NAME" value="players.BarbarianTest" />
-      <option name="METHOD_NAME" value="canAddTreasureList" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.TrollTest.hasWeapon">
     <configuration name="ThroneRoomTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="fantastic_fantasy" />
       <extension name="coverage">
@@ -140,13 +102,44 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TrollTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="fantastic_fantasy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="enemies.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="enemies" />
+      <option name="MAIN_CLASS_NAME" value="enemies.TrollTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TrollTest.hasWeapon" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="fantastic_fantasy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="enemies.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="enemies" />
+      <option name="MAIN_CLASS_NAME" value="enemies.TrollTest" />
+      <option name="METHOD_NAME" value="hasWeapon" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TrollTest.hasWeapon" />
+        <item itemvalue="JUnit.TrollTest" />
         <item itemvalue="JUnit.ThroneRoomTest.hasLevel" />
         <item itemvalue="JUnit.ThroneRoomTest" />
         <item itemvalue="JUnit.ThroneRoomTest.isComplete" />
-        <item itemvalue="JUnit.BarbarianTest.canAddTreasureList" />
-        <item itemvalue="JUnit.BarbarianTest.canAddItemList" />
       </list>
     </recent_temporary>
   </component>
@@ -187,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655896552233</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="player Room test with Array done">
+      <created>1655902242402</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1655902242402</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -206,6 +206,7 @@
     <MESSAGE value="weapon class" />
     <MESSAGE value="player class test done" />
     <MESSAGE value="player class test with Array done" />
-    <option name="LAST_COMMIT_MESSAGE" value="player class test with Array done" />
+    <MESSAGE value="player Room test with Array done" />
+    <option name="LAST_COMMIT_MESSAGE" value="player Room test with Array done" />
   </component>
 </project>
