@@ -2,6 +2,7 @@ package players;
 
 import enemies.Enemy;
 import items.Item;
+import rooms.Room;
 import treasures.Treasure;
 import weapons.Weapon;
 
@@ -17,6 +18,8 @@ public abstract class Player {
     private ArrayList<Treasure> treasures;
     private ArrayList<Item> items;
 
+    private ArrayList<Room> completedRooms;
+
 
 
 
@@ -29,6 +32,8 @@ public abstract class Player {
         weapons = new ArrayList<Weapon>();
         treasures = new ArrayList<Treasure>();
         items = new ArrayList<Item>();
+        completedRooms = new ArrayList<>();
+
 
     }
 
@@ -64,6 +69,10 @@ public abstract class Player {
         return items;
     }
 
+    public ArrayList<Room> getCompletedRooms() {
+        return completedRooms;
+    }
+
     public void setHealth(int health) {
         this.health = health;
     }
@@ -73,6 +82,9 @@ public abstract class Player {
     }
 
     public void addTreasures(Treasure treasures) {
+        this.treasures.add(treasures);
+    }
+    public void pickTreasures(Treasure treasures, Room room) {
         this.treasures.add(treasures);
     }
 
@@ -85,5 +97,14 @@ public abstract class Player {
         enemyHealth -= this.getActiveWeapon().getDamage();
         enemy.setHealth(enemyHealth);
     }
+
+    public void pickTreasureFromRoom(Room room){
+        Treasure treasure = room.removeTreasure();
+        this.treasures.add(treasure);
+    }
+
+
+
+
 
 }

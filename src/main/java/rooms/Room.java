@@ -40,5 +40,13 @@ public abstract class Room {
         return roomLevel;
     }
 
+    public Treasure removeTreasure() {
+        return this.treasures.remove(0);
+    }
 
+    public void setComplete(boolean complete) {
+        if (this.enemies.size() <= 0 || this.treasures.size() <= 0){
+            this.complete = true;
+        }
+    }
 }

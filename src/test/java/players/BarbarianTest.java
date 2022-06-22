@@ -1,17 +1,26 @@
 package players;
 
+import enemies.Enemy;
+import enemies.Orc;
 import enemies.Troll;
 import items.HealingPotion;
 import items.ManaPotion;
 import org.junit.Before;
 import org.junit.Test;
+import rooms.ThroneRoom;
+import rooms.TortureRoom;
 import treasures.Gold;
 import treasures.Jewel;
+import treasures.Treasure;
 import weapons.Axe;
 import weapons.Club;
 import weapons.Sword;
 
+import java.util.ArrayList;
+
 import static org.junit.Assert.*;
+import static rooms.RoomLevel.LEVEL1;
+import static rooms.RoomLevel.LEVEL2;
 
 public class BarbarianTest {
 
@@ -26,6 +35,16 @@ public class BarbarianTest {
     ManaPotion manaPotion;
 
     Troll troll;
+    ThroneRoom throneRoom;
+    TortureRoom tortureRoom;
+    Troll troll1;
+    Troll troll2;
+    Troll troll3;
+    Orc orc;
+    ArrayList<Enemy> enemies1;
+    ArrayList<Enemy> enemies2;
+    ArrayList<Treasure> treasures1;
+    ArrayList<Treasure> treasures2;
 
     @Before
     public void before(){
@@ -38,6 +57,31 @@ public class BarbarianTest {
         jewel = new Jewel("Diamond");
         barbarian1 = new Barbarian("Conan",50,100,200, sword);
         troll = new Troll("Fiona",40,sword);
+
+
+        troll1 = new Troll("Andrew",20,club);
+        troll2 = new Troll("Emma", 15,sword);
+        troll3 = new Troll("Derek", 25,axe);
+        orc = new Orc("Cam",30,sword);
+
+
+        enemies1 = new ArrayList<>();
+        enemies1.add(troll1);
+
+        enemies2 = new ArrayList<>();
+        enemies2.add(troll1);
+        enemies2.add(orc);
+
+        treasures1 = new ArrayList<>();
+        treasures1.add(gold);
+        treasures1.add(jewel);
+
+        treasures2 = new ArrayList<>();
+        treasures2.add(gold);
+        treasures2.add(jewel);
+
+        throneRoom = new ThroneRoom("001",false,enemies1,treasures1, LEVEL1);
+        tortureRoom = new TortureRoom("002",false,enemies2,treasures2, LEVEL2);
     }
 
     @Test
@@ -96,4 +140,15 @@ public class BarbarianTest {
         assertEquals(180,barbarian1.getHealth());
     }
 
+    @Test
+    public void hasCompletedRooms(){
+        assertEquals(0,barbarian1.getCompletedRooms().size());
+    }
+
+    @Test
+    public void canPickTreasures(){
+        barbarian1.pickTreasureFromRoom(throneRoom);
+        assertEquals(1,barbarian1.getTreasures().size());
+        assertEquals(1,throneRoom.getTreasures().size());
+    }
 }

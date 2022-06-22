@@ -94,4 +94,5 @@ public class ThroneRoomTest {
     public void hasLevel(){
         assertEquals(LEVEL1,throneRoom.getRoomLevel());
     }
+
 }
