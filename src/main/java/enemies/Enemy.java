@@ -1,5 +1,6 @@
 package enemies;
 
+import players.Player;
 import weapons.Weapon;
 
 public abstract class Enemy {
@@ -23,5 +24,15 @@ public abstract class Enemy {
 
     public Weapon getWeapon() {
         return weapon;
+    }
+
+    public void setHealth(int health) {
+        this.health = health;
+    }
+
+    public void attackPlayer(Player player){
+        int playerHealth = player.getHealth();
+        playerHealth -= this.getWeapon().getDamage();
+        player.setHealth(playerHealth);
     }
 }

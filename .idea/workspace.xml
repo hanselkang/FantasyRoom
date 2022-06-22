@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c535848-eb40-4f77-99d3-00a5a9592fb5" name="Changes" comment="player Room test with Array done">
-      <change afterPath="$PROJECT_DIR$/src/test/java/enemies/TrollTest.java" afterDir="false" />
+    <list default="true" id="4c535848-eb40-4f77-99d3-00a5a9592fb5" name="Changes" comment="Enemy test with Array done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/enemies/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/enemies/Enemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/players/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/players/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/enemies/TrollTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/enemies/TrollTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/players/BarbarianTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/players/BarbarianTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,49 +57,34 @@
       <recent name="players" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TrollTest.hasWeapon">
-    <configuration name="ThroneRoomTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.BarbarianTest.canBeAttacked">
+    <configuration name="BarbarianTest.canAttack" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="fantastic_fantasy" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="rooms.*" />
+          <option name="PATTERN" value="players.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="rooms" />
-      <option name="MAIN_CLASS_NAME" value="rooms.ThroneRoomTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ThroneRoomTest.hasLevel" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="fantastic_fantasy" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="rooms.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="rooms" />
-      <option name="MAIN_CLASS_NAME" value="rooms.ThroneRoomTest" />
-      <option name="METHOD_NAME" value="hasLevel" />
+      <option name="PACKAGE_NAME" value="players" />
+      <option name="MAIN_CLASS_NAME" value="players.BarbarianTest" />
+      <option name="METHOD_NAME" value="canAttack" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ThroneRoomTest.isComplete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BarbarianTest.canBeAttacked" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="fantastic_fantasy" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="rooms.*" />
+          <option name="PATTERN" value="players.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="rooms" />
-      <option name="MAIN_CLASS_NAME" value="rooms.ThroneRoomTest" />
-      <option name="METHOD_NAME" value="isComplete" />
+      <option name="PACKAGE_NAME" value="players" />
+      <option name="MAIN_CLASS_NAME" value="players.BarbarianTest" />
+      <option name="METHOD_NAME" value="canBeAttacked" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -113,6 +101,22 @@
       <option name="PACKAGE_NAME" value="enemies" />
       <option name="MAIN_CLASS_NAME" value="enemies.TrollTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TrollTest.canAttack" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="fantastic_fantasy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="enemies.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="enemies" />
+      <option name="MAIN_CLASS_NAME" value="enemies.TrollTest" />
+      <option name="METHOD_NAME" value="canAttack" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -135,11 +139,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BarbarianTest.canBeAttacked" />
+        <item itemvalue="JUnit.TrollTest.canAttack" />
+        <item itemvalue="JUnit.BarbarianTest.canAttack" />
         <item itemvalue="JUnit.TrollTest.hasWeapon" />
         <item itemvalue="JUnit.TrollTest" />
-        <item itemvalue="JUnit.ThroneRoomTest.hasLevel" />
-        <item itemvalue="JUnit.ThroneRoomTest" />
-        <item itemvalue="JUnit.ThroneRoomTest.isComplete" />
       </list>
     </recent_temporary>
   </component>
@@ -187,7 +191,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655902242402</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Enemy test with Array done">
+      <created>1655903115590</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1655903115590</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -207,6 +218,7 @@
     <MESSAGE value="player class test done" />
     <MESSAGE value="player class test with Array done" />
     <MESSAGE value="player Room test with Array done" />
-    <option name="LAST_COMMIT_MESSAGE" value="player Room test with Array done" />
+    <MESSAGE value="Enemy test with Array done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Enemy test with Array done" />
   </component>
 </project>

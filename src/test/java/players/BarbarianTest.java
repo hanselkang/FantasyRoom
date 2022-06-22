@@ -1,5 +1,6 @@
 package players;
 
+import enemies.Troll;
 import items.HealingPotion;
 import items.ManaPotion;
 import org.junit.Before;
@@ -24,6 +25,8 @@ public class BarbarianTest {
     HealingPotion healingPotion;
     ManaPotion manaPotion;
 
+    Troll troll;
+
     @Before
     public void before(){
         sword = new Sword("Sword",20);
@@ -34,6 +37,7 @@ public class BarbarianTest {
         gold = new Gold("Gold");
         jewel = new Jewel("Diamond");
         barbarian1 = new Barbarian("Conan",50,100,200, sword);
+        troll = new Troll("Fiona",40,sword);
     }
 
     @Test
@@ -80,6 +84,16 @@ public class BarbarianTest {
         assertEquals(2,barbarian1.getTreasures().size());
     }
 
+    @Test
+    public void canAttack(){
+        barbarian1.attackEnemy(troll);
+        assertEquals(20,troll.getHealth());
+    }
 
+    @Test
+    public void canBeAttacked(){
+        troll.attackPlayer(barbarian1);
+        assertEquals(180,barbarian1.getHealth());
+    }
 
 }

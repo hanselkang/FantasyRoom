@@ -1,5 +1,6 @@
 package players;
 
+import enemies.Enemy;
 import items.Item;
 import treasures.Treasure;
 import weapons.Weapon;
@@ -63,6 +64,10 @@ public abstract class Player {
         return items;
     }
 
+    public void setHealth(int health) {
+        this.health = health;
+    }
+
     public void addWeapons(Weapon weapons) {
         this.weapons.add(weapons);
     }
@@ -74,4 +79,11 @@ public abstract class Player {
     public void addItems(Item items) {
         this.items.add(items);
     }
+
+    public void attackEnemy(Enemy enemy){
+        int enemyHealth = enemy.getHealth();
+        enemyHealth -= this.getActiveWeapon().getDamage();
+        enemy.setHealth(enemyHealth);
+    }
+
 }
